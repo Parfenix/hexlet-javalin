@@ -31,7 +31,7 @@ public class HelloWorld {
 
       app.get("/courses/{id}", ctx -> {
           Long id = Long.valueOf(ctx.pathParam("id"));
-          Course course = new Course(id, "Курс " + id, "Описание курса " + id); // Создайте курс по ID
+          Course course = new Course(id, "Курс " + id, "Описание курса " + id);
           ctx.render("courses/show.jte", model("course", course));
       });
 
